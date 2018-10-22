@@ -23,4 +23,8 @@ class Show < ActiveRecord::Base
     Show.order(rating: :desc).first
   end
 
+  def Show::shows_by_alphabetical_order
+    Show.order(name: :asc)
+  end 
+
 end

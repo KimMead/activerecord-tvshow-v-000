@@ -15,4 +15,8 @@ class Show < ActiveRecord::Base
     Show.where("rating > 5")
   end
 
+  def Show::least_popular_show 
+    Show.order(rating: :asc).first
+  end 
+
 end
